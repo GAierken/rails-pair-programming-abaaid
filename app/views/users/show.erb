@@ -1,0 +1,9 @@
+<h1>
+<%= @user.name %>
+<%= @user.age %>
+<% @user.aids.each do |aid|%>
+<%= link_to aid.name, aid_path(aid) %>
+<% end %>
+</h1>
+
+<%= button_to "delete", @user, :method => :delete %>
